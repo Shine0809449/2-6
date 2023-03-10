@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+ int startHr = 0, startMin = 0, endHr = 0, endMin = 0;
+ cin >> startHr >> startMin;
+ cin >> endHr >> endMin;
+ int sec = (endHr - startHr) * 60 + (endMin - startMin);
+ if (sec <= 120 && sec >= 0) {
+  cout << sec / 30 * 30 << endl;
+ }
+ else if (sec > 120 && sec <= 240) {
+  cout << (sec - 120) / 30 * 40 + 120 << endl;
+ }
+ else {
+  cout << (sec - 240) / 30 * 60 + 120 + 160 << endl;
+ }
+ return 0;
+}
